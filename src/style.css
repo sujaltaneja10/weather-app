@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Blinker;
+  font-weight: 300;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  height: 15%;
+  width: 100%;
+  padding: 0 50px;
+  background-color: #343a40;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 60%;
+}
+
+input {
+  width: 80%;
+  height: 100%;
+  font-size: medium;
+  padding: 5px 10px;
+}
+
+button {
+  height: 100%;
+  padding: 5px 20px;
+  background-color: #eb6f4c;
+  border: 0;
+  color: white;
+  border-radius: 2px;
+  font-size: medium;
+}
+
+.search:hover {
+  background-color: rgba(235, 111, 76, 0.9);
+}
+
+.change {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.change:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.top-main {
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 5%;
+}
+
+.left-side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-side {
+  width: 60%;
+}
+
+.temp-range {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.temp-value {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.city-name {
+  font-size: 40px;
+}
+
+.weather-desc {
+  font-size: 30px;
+}
+
+.temp-range {
+  font-size: 20px;
+}
+
+.center-main {
+  height: 40%;
+  width: 100%;
+  background-color: #343a40;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.main-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 20%;
+  padding: 5px 10px;
+}
+
+.item-heading {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.item-value {
+  color: white;
+  font-size: 20px;
+}
+
+.bottom-main {
+  height: 120%;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-main-item {
+  height: calc(100% / 4);
+}
+
+.day-wise-temp {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.weekly-head {
+  width: 20%;
+  color: #6c757d;
+  height: 100%;
+}
+
+.weekly-item {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  color: rgba(108, 117, 125, 1);
+}
+
+.temperature.weekly-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.temperature.weekly-item div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 10px;
+  width: 10px;
+}
