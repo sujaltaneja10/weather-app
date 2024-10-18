@@ -103,11 +103,11 @@ button {
 }
 
 .weather-desc {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .temp-range {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .center-main {
@@ -239,4 +239,14 @@ img {
 .icon-img {
   height: 50px;
   width: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
 }

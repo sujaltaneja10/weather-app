@@ -12,19 +12,17 @@ import {
   getTodaysData,
   getNextWeekData,
   getHourlyData,
+  getImg,
 } from "./data.js";
 
-export { showTodayMainData, showTodayData, showNextWeekData, showHourlyData };
-
-import clearDay from "../img/clear-day.png";
-import clearNight from "../img/clear-night.png";
-import cloudy from "../img/cloudy.png";
-import fog from "../img/fog.png";
-import partlyDay from "../img/partly-cloudy-day.png";
-import partlyNight from "../img/partly-cloudy-night.png";
-import rain from "../img/rain.png";
-import rickroll from "../img/rickroll.jpeg";
-import wind from "../img/wind.png";
+export {
+  showTodayMainData,
+  showTodayData,
+  showNextWeekData,
+  showHourlyData,
+  addLoadingScreen,
+  removeLoadingScreen,
+};
 
 const DAYS_IN_WEEK = 7;
 const HOURS_IN_DAY = 24;
@@ -73,14 +71,18 @@ async function showHourlyData(weatherData) {
   }
 }
 
-async function getImg(data) {
-  if (data === "clear-day") return clearDay;
-  else if (data === "clear-night") return clearNight;
-  else if (data === "cloudy") return cloudy;
-  else if (data === "fog") return fog;
-  else if (data === "partly-cloudy-day") return partlyDay;
-  else if (data === "partly-cloudy-night") return partlyNight;
-  else if (data === "rain") return rain;
-  else if (data === "wind") return wind;
-  else return rickroll;
-}
+const addLoadingScreen = () => {
+  const loading = document.querySelector(".loading");
+  loading.classList.remove("hidden");
+  document.querySelectorAll("main").forEach((e) => {
+    e.classList.add("hidden");
+  });
+};
+
+const removeLoadingScreen = () => {
+  const loading = document.querySelector(".loading");
+  loading.classList.add("hidden");
+  document.querySelectorAll("main").forEach((e) => {
+    e.classList.remove("hidden");
+  });
+};

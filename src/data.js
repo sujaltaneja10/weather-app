@@ -1,4 +1,20 @@
-export { getTodaysMainData, getTodaysData, getNextWeekData, getHourlyData };
+import clearDay from "../img/clear-day.png";
+import clearNight from "../img/clear-night.png";
+import cloudy from "../img/cloudy.png";
+import fog from "../img/fog.png";
+import partlyDay from "../img/partly-cloudy-day.png";
+import partlyNight from "../img/partly-cloudy-night.png";
+import rain from "../img/rain.png";
+import rickroll from "../img/rickroll.jpeg";
+import wind from "../img/wind.png";
+
+export {
+  getTodaysMainData,
+  getTodaysData,
+  getNextWeekData,
+  getHourlyData,
+  getImg,
+};
 
 async function getTodaysMainData(weatherData) {
   const todayData = weatherData.days[0];
@@ -54,4 +70,16 @@ async function getHourlyData(index, weatherData) {
     hourlyData.temp,
     hourlyData.icon,
   ];
+}
+
+async function getImg(data) {
+  if (data === "clear-day") return clearDay;
+  else if (data === "clear-night") return clearNight;
+  else if (data === "cloudy") return cloudy;
+  else if (data === "fog") return fog;
+  else if (data === "partly-cloudy-day") return partlyDay;
+  else if (data === "partly-cloudy-night") return partlyNight;
+  else if (data === "rain") return rain;
+  else if (data === "wind") return wind;
+  else return rickroll;
 }
